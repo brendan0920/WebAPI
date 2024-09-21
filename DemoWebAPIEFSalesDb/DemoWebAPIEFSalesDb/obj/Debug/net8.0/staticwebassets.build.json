@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Uj7NhE5/n3ulZiFoxN7+5Z1U3rDQWnMHqT5GnONyHIM=",
+  "Source": "DemoWebAPIEFSalesDb",
+  "BasePath": "_content/DemoWebAPIEFSalesDb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

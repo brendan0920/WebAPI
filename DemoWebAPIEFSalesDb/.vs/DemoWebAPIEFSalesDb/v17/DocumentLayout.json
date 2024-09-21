@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\demowebapiefsalesdb\\demowebapiefsalesdb\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|solutionrelative:demowebapiefsalesdb\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\demowebapiefsalesdb\\demowebapiefsalesdb\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|solutionrelative:demowebapiefsalesdb\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\demowebapiefsalesdb\\demowebapiefsalesdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|solutionrelative:demowebapiefsalesdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\demowebapiefsalesdb\\demowebapiefsalesdb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|solutionrelative:demowebapiefsalesdb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\demowebapiefsalesdb\\demowebapiefsalesdb\\models\\salesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AF44531-9B73-4678-BDA9-E0FFA7F48301}|DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb.csproj|solutionrelative:demowebapiefsalesdb\\models\\salesdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Program.cs",
+              "RelativeDocumentMoniker": "DemoWebAPIEFSalesDb\\Program.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Program.cs",
+              "RelativeToolTip": "DemoWebAPIEFSalesDb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T17:46:50.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\appsettings.json",
+              "RelativeDocumentMoniker": "DemoWebAPIEFSalesDb\\appsettings.json",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\appsettings.json",
+              "RelativeToolTip": "DemoWebAPIEFSalesDb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-21T17:41:48.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SalesDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Models\\SalesDBContext.cs",
+              "RelativeDocumentMoniker": "DemoWebAPIEFSalesDb\\Models\\SalesDBContext.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Models\\SalesDBContext.cs",
+              "RelativeToolTip": "DemoWebAPIEFSalesDb\\Models\\SalesDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T17:39:58.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "DemoWebAPIEFSalesDb\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Models\\Customer.cs",
+              "RelativeToolTip": "DemoWebAPIEFSalesDb\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T17:38:55.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "DemoWebAPIEFSalesDb\\Controllers\\CustomersController.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\DemoWebAPIEFSalesDb\\DemoWebAPIEFSalesDb\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "DemoWebAPIEFSalesDb\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T19:41:01.161Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@DemoWebAPIEFSalesDb_HostAddress = http://localhost:5037
+
+GET {{DemoWebAPIEFSalesDb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
