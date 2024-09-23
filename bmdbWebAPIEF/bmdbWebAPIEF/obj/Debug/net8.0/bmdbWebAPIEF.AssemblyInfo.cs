@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bmdbWebAPIEF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c46a1ff10418bbda21bd923c4b1609a5d6848355")]
 [assembly: System.Reflection.AssemblyProductAttribute("bmdbWebAPIEF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bmdbWebAPIEF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
