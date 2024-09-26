@@ -31,7 +31,7 @@ namespace bmdbWebAPIEF.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Credit>> GetCredit(int id)
         {
-            var credit = await _context.Credits.FindAsync(id);
+            var credit = await _context.Credits.Include(c => c.Movie).Include(c => c.Actor).FirstOrDefaultAsync(c => c.Id == id);
 
             if (credit == null)
             {
@@ -103,5 +103,16 @@ namespace bmdbWebAPIEF.Controllers
         {
             return _context.Credits.Any(e => e.Id == id);
         }
+
+        [HttpGet("movie/{movieId}")]
+        public async Task<ActionResult<IEnumerable<Credit>>> GetCreditsForMovieId(int movieId)
+        {
+            var credits = await _context.Credits.Include(c => c.Movie)
+                .Include(c => c.Actor)
+                .Where(c => c.MovieId == movieId)
+                .ToListAsync();
+            return credits;
+        }
+
     }
 }

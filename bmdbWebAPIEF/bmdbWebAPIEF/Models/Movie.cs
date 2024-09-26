@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace bmdbWebAPIEF.Models;
@@ -27,6 +28,7 @@ public partial class Movie
     [Unicode(false)]
     public string Director { get; set; } = null!;
 
+    [JsonIgnore]
     [InverseProperty("Movie")]
     public virtual ICollection<Credit> Credits { get; set; } = new List<Credit>();
 
