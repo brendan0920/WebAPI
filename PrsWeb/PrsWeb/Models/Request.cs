@@ -41,7 +41,7 @@ public partial class Request
     public string? Status { get; set; } = null!;
 
     [Column("total")]
-    public decimal? Total { get; set; }
+    public decimal Total { get; set; }
 
     [Column("submittedDate", TypeName = "datetime")]
     public DateTime SubmittedDate { get; set; }
@@ -49,7 +49,7 @@ public partial class Request
     [Column("reasonForRejection")]
     [StringLength(100)]
     [Unicode(false)]
-    public string? ReasonForRejection { get; set; } = null!;
+    public string? ReasonForRejection { get; set; }
 
     [JsonIgnore]
     [InverseProperty("Request")]

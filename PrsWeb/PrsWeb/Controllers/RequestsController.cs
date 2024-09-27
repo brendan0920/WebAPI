@@ -13,7 +13,7 @@ namespace PrsWeb.Controllers
     [ApiController]
     public class RequestsController : ControllerBase
     {        
-        private readonly PrsdbContext _context;
+        private readonly PrsdbContext _context;        
 
         public RequestsController(PrsdbContext context)
         {
@@ -80,7 +80,9 @@ namespace PrsWeb.Controllers
         public async Task<ActionResult<Request>> PostRequest(Request request)
         {
             request.Status = "NEW";
-            request.SubmittedDate = DateTime.Now;            
+            request.Total = 0.0m;
+            request.SubmittedDate = DateTime.Now;
+            //request.ReasonForRejection = null;
             _context.Requests.Add(request);
             await _context.SaveChangesAsync();
 
@@ -160,6 +162,7 @@ namespace PrsWeb.Controllers
             // Get all requests
             // Wherestatus = "REVIEW" and req.userId != signed in user
             // Get requests in REVIEW status and req.userId != to userId
+            // SELECT * FROM Request WHERE Status = 'REVIEW' AND UserID != 2;
 
             var requests = await _context.Requests                
                 .Include(r => r.User)
@@ -221,10 +224,9 @@ namespace PrsWeb.Controllers
             {
                 return NotFound();
             }
-            else
-            {
-                request.Status = "REJECTED";
-            }
+            
+            request.Status = "REJECTED";
+            //request.ReasonForRejection = ;
 
             _context.Entry(request).State = EntityState.Modified;
 
@@ -244,6 +246,7 @@ namespace PrsWeb.Controllers
                 }
             }
             return request;
+            
         }
     }
 }

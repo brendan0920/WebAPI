@@ -24,6 +24,7 @@ namespace PrsWeb.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LineItem>>> GetLineItems()
         {
+
             return await _context.LineItems.ToListAsync();
         }
 
@@ -31,7 +32,10 @@ namespace PrsWeb.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<LineItem>> GetLineItem(int id)
         {
-            var lineItem = await _context.LineItems.Include(l => l.Request).Include(l => l.Product).FirstOrDefaultAsync(l => l.Id == id);
+            var lineItem = await _context.LineItems
+                .Include(l => l.Request)
+                .Include(l => l.Product)
+                .FirstOrDefaultAsync(l => l.Id == id);
 
             if (lineItem == null)
             {
@@ -51,7 +55,8 @@ namespace PrsWeb.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(lineItem).State = EntityState.Modified;
+            _context.Entry(lineItem).State = EntityState.Modified;            
+            recalcTotal();
 
             try
             {
@@ -68,7 +73,6 @@ namespace PrsWeb.Controllers
                     throw;
                 }
             }
-
             return NoContent();
         }
 
@@ -77,6 +81,7 @@ namespace PrsWeb.Controllers
         [HttpPost]
         public async Task<ActionResult<LineItem>> PostLineItem(LineItem lineItem)
         {
+            recalcTotal();
             _context.LineItems.Add(lineItem);
             await _context.SaveChangesAsync();
 
@@ -94,6 +99,7 @@ namespace PrsWeb.Controllers
             }
 
             _context.LineItems.Remove(lineItem);
+            recalcTotal();
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -104,7 +110,8 @@ namespace PrsWeb.Controllers
             return _context.LineItems.Any(e => e.Id == id);
         }
 
-        [HttpGet("request/{requestId}")]
+        // GET: api/LineItems/lines-for-req/{reqId}
+        [HttpGet("lines-for-req/{requestId}")]
         public async Task<ActionResult<IEnumerable<LineItem>>> GetLinesForRequestId(int requestId)
         {
             var lineitems = await _context.LineItems
@@ -113,6 +120,18 @@ namespace PrsWeb.Controllers
                 .Where(l => l.RequestId == requestId)
                 .ToListAsync();
             return lineitems;
+        }
+               
+
+        public decimal recalcTotal()
+        {
+            Product product = new Product();
+            LineItem lineItem = new LineItem();
+            Models.Request request = new Models.Request();
+
+            decimal total = (product.Price) * (lineItem.Quantity);
+            request.Total = total;
+            return request.Total;
         }
     }
 }

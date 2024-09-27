@@ -47,6 +47,26 @@
   },
   {
     "ContainingType": "PrsWeb.Controllers.LineItemsController",
+    "Method": "recalcTotal",
+    "RelativePath": "api/LineItems",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Decimal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PrsWeb.Controllers.LineItemsController",
     "Method": "GetLineItem",
     "RelativePath": "api/LineItems/{id}",
     "HttpMethod": "GET",
@@ -111,7 +131,7 @@
   {
     "ContainingType": "PrsWeb.Controllers.LineItemsController",
     "Method": "GetLinesForRequestId",
-    "RelativePath": "api/LineItems/request/{requestId}",
+    "RelativePath": "api/LineItems/lines-for-req/{requestId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
