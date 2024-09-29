@@ -1,0 +1,15 @@
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\bin\Debug\net8.0\PrsRequestNumberGeneratorV02.exe
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\bin\Debug\net8.0\PrsRequestNumberGeneratorV02.deps.json
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\bin\Debug\net8.0\PrsRequestNumberGeneratorV02.runtimeconfig.json
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\bin\Debug\net8.0\PrsRequestNumberGeneratorV02.dll
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\bin\Debug\net8.0\PrsRequestNumberGeneratorV02.pdb
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.AssemblyInfoInputs.cache
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.AssemblyInfo.cs
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.csproj.CoreCompileInputs.cache
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.sourcelink.json
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.dll
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\refint\PrsRequestNumberGeneratorV02.dll
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.pdb
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\PrsRequestNumberGeneratorV02.genruntimeconfig.cache
+C:\Users\max-student\Documents\BrendanBootcampFolder\repos\WebAPI\PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02\obj\Debug\net8.0\ref\PrsRequestNumberGeneratorV02.dll

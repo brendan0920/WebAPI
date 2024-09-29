@@ -55,11 +55,11 @@ namespace PrsWeb.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(lineItem).State = EntityState.Modified;            
-            recalcTotal();
+            _context.Entry(lineItem).State = EntityState.Modified;
 
             try
             {
+                await recalcTotal();
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -80,9 +80,9 @@ namespace PrsWeb.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<LineItem>> PostLineItem(LineItem lineItem)
-        {
-            recalcTotal();
+        {            
             _context.LineItems.Add(lineItem);
+            await recalcTotal();
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetLineItem", new { id = lineItem.Id }, lineItem);
@@ -99,9 +99,8 @@ namespace PrsWeb.Controllers
             }
 
             _context.LineItems.Remove(lineItem);
-            recalcTotal();
+            await recalcTotal();
             await _context.SaveChangesAsync();
-
             return NoContent();
         }
 
@@ -121,15 +120,24 @@ namespace PrsWeb.Controllers
                 .ToListAsync();
             return lineitems;
         }
-               
 
-        public decimal recalcTotal()
+        public async Task<decimal> recalcTotal()
         {
+            //Request request, Product product
+            // SELECT FROM LineItem Join Request/Product 
+            // Request.Total = Product.Price * LineItem.Quantity
+
             Product product = new Product();
             LineItem lineItem = new LineItem();
-            Models.Request request = new Models.Request();
+            Request request = new Request();
 
-            decimal total = (product.Price) * (lineItem.Quantity);
+            var lineItems = await _context.LineItems
+                .Include(l => l.Request)
+                .Include(l => l.Product)
+                .Where(l => l.RequestId == request.Id && l.ProductId == product.Id)
+                .ToListAsync();
+            decimal total = lineItems.Sum(lineItems => lineItems.Product.Price * lineItems.Quantity);
+            //decimal total = product.Price * lineItem.Quantity;            
             request.Total = total;
             return request.Total;
         }

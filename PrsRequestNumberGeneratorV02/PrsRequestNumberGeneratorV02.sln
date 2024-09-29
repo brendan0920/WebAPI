@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrsRequestNumberGeneratorV02", "PrsRequestNumberGeneratorV02\PrsRequestNumberGeneratorV02.csproj", "{696B787C-3039-45A2-A703-D368ECA57301}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{696B787C-3039-45A2-A703-D368ECA57301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696B787C-3039-45A2-A703-D368ECA57301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696B787C-3039-45A2-A703-D368ECA57301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696B787C-3039-45A2-A703-D368ECA57301}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1162F883-2DAE-4A88-8D1B-3D5A176640C5}
+	EndGlobalSection
+EndGlobal

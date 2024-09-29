@@ -28,7 +28,7 @@ public partial class Product
     [Unicode(false)]
     public string Name { get; set; } = null!;
 
-    [Column("price")]
+    [Column("price", TypeName = "decimal(10,2)")]
     public decimal Price { get; set; }
 
     [Column("unit")]

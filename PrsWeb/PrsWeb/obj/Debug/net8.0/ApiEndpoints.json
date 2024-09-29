@@ -292,8 +292,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "PrsWeb.Models.Request",
+        "Name": "requestForm",
+        "Type": "PrsWeb.Models.RequestForm",
         "IsRequired": true
       }
     ],
@@ -435,6 +435,11 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "reasonForReject",
+        "Type": "PrsWeb.Models.RequestRFR",
         "IsRequired": true
       }
     ],

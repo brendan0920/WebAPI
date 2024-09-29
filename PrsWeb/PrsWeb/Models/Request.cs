@@ -17,6 +17,11 @@ public partial class Request
     [Column("userId")]
     public int UserId { get; set; }
 
+    [Column("requestNumber")]
+    [StringLength(11)]
+    [Unicode(false)]
+    public string? RequestNumber { get; set; } = null!;
+
     [Column("description")]
     [StringLength(100)]
     [Unicode(false)]
@@ -28,7 +33,7 @@ public partial class Request
     public string Justification { get; set; } = null!;
 
     [Column("dateNeeded")]
-    public DateOnly? DateNeeded { get; set; }
+    public DateOnly DateNeeded { get; set; }
 
     [Column("deliveryMode")]
     [StringLength(25)]
@@ -40,7 +45,7 @@ public partial class Request
     [Unicode(false)]
     public string? Status { get; set; } = null!;
 
-    [Column("total")]
+    [Column("total", TypeName ="decimal(10,2)")]
     public decimal Total { get; set; }
 
     [Column("submittedDate", TypeName = "datetime")]
@@ -49,7 +54,7 @@ public partial class Request
     [Column("reasonForRejection")]
     [StringLength(100)]
     [Unicode(false)]
-    public string? ReasonForRejection { get; set; }
+    public string? ReasonForRejection { get; set; } = null!;
 
     [JsonIgnore]
     [InverseProperty("Request")]
