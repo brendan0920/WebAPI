@@ -213,6 +213,7 @@ namespace PrsWeb.Controllers
         public async Task<ActionResult<Request>> PutRequestReject(int id, RequestRFR reasonForReject)
         {
             // get the request for id, set status to REJECTED, set the ReasonForRejection, then save request
+            // created a 'RequestRFR' class in the Models folder in order to input only 'reasonForRejection' in the JSON body
             
             var request = await _context.Requests.FindAsync(id);
             if (request == null)
@@ -222,7 +223,6 @@ namespace PrsWeb.Controllers
 
             request.SubmittedDate = DateTime.Now;
             request.Status = "REJECTED";
-            // created a 'RequestRFR' class in the Models folder in order to input only 'reasonForRejection' in the body
             request.ReasonForRejection = reasonForReject.ReasonForRejection; 
 
 

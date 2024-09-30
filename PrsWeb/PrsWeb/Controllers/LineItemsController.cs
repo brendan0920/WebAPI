@@ -48,18 +48,33 @@ namespace PrsWeb.Controllers
         // PUT: api/LineItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutLineItem(int id, LineItem lineItem)
+        public async Task<ActionResult<LineItem>> PutLineItem(int id, LineItem lineItem)
         {
             if (id != lineItem.Id)
             {
                 return BadRequest();
             }
 
+            Product product = new Product();
+            Request request = new Request();
+
+            var lineItems = await _context.LineItems                
+                .Include(l => l.Product)
+                .Include(l => l.Request)
+                .Where(l => l.ProductId == product.Id && l.RequestId == request.Id)
+                .ToListAsync();
+            decimal total = product.Price * lineItem.Quantity;
+            request.Total = total;
+            //_context.Requests.Update(request);
+            //_context.Entry(request.Total).State = EntityState.Modified;
+
             _context.Entry(lineItem).State = EntityState.Modified;
+
+
 
             try
             {
-                await recalcTotal();
+                //await recalcTotal();
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -82,7 +97,7 @@ namespace PrsWeb.Controllers
         public async Task<ActionResult<LineItem>> PostLineItem(LineItem lineItem)
         {            
             _context.LineItems.Add(lineItem);
-            await recalcTotal();
+            //await recalcTotal();
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetLineItem", new { id = lineItem.Id }, lineItem);
@@ -99,7 +114,7 @@ namespace PrsWeb.Controllers
             }
 
             _context.LineItems.Remove(lineItem);
-            await recalcTotal();
+            //await recalcTotal();
             await _context.SaveChangesAsync();
             return NoContent();
         }
@@ -115,7 +130,7 @@ namespace PrsWeb.Controllers
         {
             var lineitems = await _context.LineItems
                 .Include(l => l.Request)
-                .Include(l => l.Product)
+                //.Include(l => l.Product)
                 .Where(l => l.RequestId == requestId)
                 .ToListAsync();
             return lineitems;
@@ -124,22 +139,22 @@ namespace PrsWeb.Controllers
         public async Task<decimal> recalcTotal()
         {
             //Request request, Product product
-            // SELECT FROM LineItem Join Request/Product 
+            // SELECT total FROM LineItem Join Request and Product On each Id
             // Request.Total = Product.Price * LineItem.Quantity
 
             Product product = new Product();
-            LineItem lineItem = new LineItem();
             Request request = new Request();
+            LineItem lineItem = new LineItem();
 
             var lineItems = await _context.LineItems
                 .Include(l => l.Request)
                 .Include(l => l.Product)
                 .Where(l => l.RequestId == request.Id && l.ProductId == product.Id)
                 .ToListAsync();
-            decimal total = lineItems.Sum(lineItems => lineItems.Product.Price * lineItems.Quantity);
-            //decimal total = product.Price * lineItem.Quantity;            
+            decimal total = product.Price * lineItem.Quantity;
             request.Total = total;
             return request.Total;
+            
         }
     }
 }

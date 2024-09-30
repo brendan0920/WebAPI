@@ -107,7 +107,8 @@ namespace bmdbWebAPIEF.Controllers
         [HttpGet("movie/{movieId}")]
         public async Task<ActionResult<IEnumerable<Credit>>> GetCreditsForMovieId(int movieId)
         {
-            var credits = await _context.Credits.Include(c => c.Movie)
+            var credits = await _context.Credits
+                .Include(c => c.Movie)
                 .Include(c => c.Actor)
                 .Where(c => c.MovieId == movieId)
                 .ToListAsync();
