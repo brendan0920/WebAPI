@@ -60,7 +60,7 @@ public partial class Request
     [InverseProperty("Request")]
     public virtual ICollection<LineItem> LineItems { get; set; } = new List<LineItem>();
 
-    [ForeignKey("UserId")]
+    [ForeignKey("UserId")]    
     [InverseProperty("Requests")]
     public virtual User? User { get; set; } = null!;
 }

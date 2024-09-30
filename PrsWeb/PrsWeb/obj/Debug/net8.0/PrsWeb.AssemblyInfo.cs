@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrsWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86dee6d5cdba62b83076c2f2908d1455b2bb9864")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22a6948335638f4ac33c17ef6ab46bbc8630babe")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrsWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrsWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

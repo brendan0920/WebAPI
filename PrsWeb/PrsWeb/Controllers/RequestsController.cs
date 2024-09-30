@@ -34,7 +34,10 @@ namespace PrsWeb.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Request>> GetRequest(int id)
         {
-            var request = await _context.Requests.FindAsync(id);
+            //var request = await _context.Requests.FindAsync(id);
+            var request = await _context.Requests
+                .Include(r => r.User)
+                .FirstOrDefaultAsync(r => r.Id == id);
 
             if (request == null)
             {
@@ -146,7 +149,11 @@ namespace PrsWeb.Controllers
             // if total is <= $50, set request status to 'APPROVED', else set to "Review"
             // Update the request to REVIEW status (set request.status = "REVIEW"), then save it
             // Change submittedDate to current date
-            var request = await _context.Requests.FindAsync(id);
+
+            var request = await _context.Requests
+                .Include(r => r.User)
+                .FirstOrDefaultAsync(r => r.Id == id);
+
             if (request == null)
             {
                 return NotFound();

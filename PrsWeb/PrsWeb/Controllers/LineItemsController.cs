@@ -54,28 +54,44 @@ namespace PrsWeb.Controllers
             {
                 return BadRequest();
             }
-
-            Product product = new Product();
-            Request request = new Request();
-
-            var lineItems = await _context.LineItems                
-                .Include(l => l.Product)
-                .Include(l => l.Request)
-                .Where(l => l.ProductId == product.Id && l.RequestId == request.Id)
-                .ToListAsync();
-            decimal total = product.Price * lineItem.Quantity;
-            request.Total = total;
-            //_context.Requests.Update(request);
-            //_context.Entry(request.Total).State = EntityState.Modified;
-
-            _context.Entry(lineItem).State = EntityState.Modified;
-
-
+            
+            _context.Entry(lineItem).State = EntityState.Modified;            
 
             try
             {
-                //await recalcTotal();
                 await _context.SaveChangesAsync();
+
+                Product product = new Product();
+                //Request request = lineItem.Request;
+                
+                var request = await _context.Requests
+                    .Include(r => r.LineItems)
+                    .FirstOrDefaultAsync(r => r.Id == lineItem.RequestId);
+
+                var lineItems = await _context.LineItems
+                    .Include(l => l.Product)
+                    .Include(l => l.Request)
+                    .Where(l => l.RequestId == request.Id)
+                    .ToListAsync();
+
+                decimal newRequestTotal = 0.0m;
+                // loop thru lineitems                
+                //for (int i = 0; i <= lineItems.Count ; i++)
+                foreach (var item in lineItems) 
+                {
+                    // for each lineitem, calculate the linetotal and add to newReqeustTotal
+                                        
+                    decimal lineTotal = item.Product.Price * item.Quantity;
+
+                    newRequestTotal += lineTotal;
+                }
+
+                request.Total = newRequestTotal;
+
+                // save request
+                _context.Entry(request).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -130,13 +146,13 @@ namespace PrsWeb.Controllers
         {
             var lineitems = await _context.LineItems
                 .Include(l => l.Request)
-                //.Include(l => l.Product)
+                .Include(l => l.Product)
                 .Where(l => l.RequestId == requestId)
                 .ToListAsync();
             return lineitems;
         }
 
-        public async Task<decimal> recalcTotal()
+        public void recalcTotal()
         {
             //Request request, Product product
             // SELECT total FROM LineItem Join Request and Product On each Id
@@ -146,14 +162,15 @@ namespace PrsWeb.Controllers
             Request request = new Request();
             LineItem lineItem = new LineItem();
 
-            var lineItems = await _context.LineItems
+            var lineItems =  _context.LineItems
                 .Include(l => l.Request)
                 .Include(l => l.Product)
-                .Where(l => l.RequestId == request.Id && l.ProductId == product.Id)
+                .Where(l => l.ProductId == product.Id && l.RequestId == request.Id)
                 .ToListAsync();
-            decimal total = product.Price * lineItem.Quantity;
-            request.Total = total;
-            return request.Total;
+            request.Total = product.Price * lineItem.Quantity;
+             
+            
+            
             
         }
     }

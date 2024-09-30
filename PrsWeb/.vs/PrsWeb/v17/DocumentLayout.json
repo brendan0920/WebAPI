@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\controllers\\lineitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\models\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\models\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +15,12 @@
       "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\models\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\models\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\models\\requestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\models\\requestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\models\\requestrfr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\models\\requestrfr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\prsweb\\prsweb\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2536B699-A760-4E4E-95B3-22476964A751}|PrsWeb\\PrsWeb.csproj|solutionrelative:prsweb\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,49 +47,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "PrsWeb\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "PrsWeb\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAkwHEAAAAkAAAAAAAAAA==",
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "PrsWeb\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\Product.cs",
+              "RelativeToolTip": "PrsWeb\\Models\\Product.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T18:01:39.769Z",
+              "WhenOpened": "2024-09-30T20:14:55.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RequestForm.cs",
-              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\RequestForm.cs",
-              "RelativeDocumentMoniker": "PrsWeb\\Models\\RequestForm.cs",
-              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\RequestForm.cs",
-              "RelativeToolTip": "PrsWeb\\Models\\RequestForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T23:27:17.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RequestRFR.cs",
-              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\RequestRFR.cs",
-              "RelativeDocumentMoniker": "PrsWeb\\Models\\RequestRFR.cs",
-              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\RequestRFR.cs",
-              "RelativeToolTip": "PrsWeb\\Models\\RequestRFR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T22:32:17.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LineItem.cs",
               "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\LineItem.cs",
               "RelativeDocumentMoniker": "PrsWeb\\Models\\LineItem.cs",
               "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\LineItem.cs",
               "RelativeToolTip": "PrsWeb\\Models\\LineItem.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwB8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T19:12:54.605Z",
               "EditorCaption": ""
@@ -110,33 +78,33 @@
               "RelativeDocumentMoniker": "PrsWeb\\Controllers\\LineItemsController.cs",
               "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Controllers\\LineItemsController.cs",
               "RelativeToolTip": "PrsWeb\\Controllers\\LineItemsController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAkwDUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T17:29:36.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RequestsController.cs",
               "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Controllers\\RequestsController.cs",
               "RelativeDocumentMoniker": "PrsWeb\\Controllers\\RequestsController.cs",
               "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Controllers\\RequestsController.cs",
               "RelativeToolTip": "PrsWeb\\Controllers\\RequestsController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAUwDUAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAD0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T00:31:28.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Request.cs",
               "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\Request.cs",
               "RelativeDocumentMoniker": "PrsWeb\\Models\\Request.cs",
               "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\PrsWeb\\PrsWeb\\Models\\Request.cs",
               "RelativeToolTip": "PrsWeb\\Models\\Request.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T01:54:50.487Z",
               "EditorCaption": ""
