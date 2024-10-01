@@ -60,38 +60,7 @@ namespace PrsWeb.Controllers
             try
             {
                 await _context.SaveChangesAsync();
-
-                Product product = new Product();
-                //Request request = lineItem.Request;
-                
-                var request = await _context.Requests
-                    .Include(r => r.LineItems)
-                    .FirstOrDefaultAsync(r => r.Id == lineItem.RequestId);
-
-                var lineItems = await _context.LineItems
-                    .Include(l => l.Product)
-                    .Include(l => l.Request)
-                    .Where(l => l.RequestId == request.Id)
-                    .ToListAsync();
-
-                decimal newRequestTotal = 0.0m;
-                // loop thru lineitems                
-                //for (int i = 0; i <= lineItems.Count ; i++)
-                foreach (var item in lineItems) 
-                {
-                    // for each lineitem, calculate the linetotal and add to newReqeustTotal
-                                        
-                    decimal lineTotal = item.Product.Price * item.Quantity;
-
-                    newRequestTotal += lineTotal;
-                }
-
-                request.Total = newRequestTotal;
-
-                // save request
-                _context.Entry(request).State = EntityState.Modified;
-                await _context.SaveChangesAsync();
-
+                await recalcTotal(lineItem);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -112,9 +81,9 @@ namespace PrsWeb.Controllers
         [HttpPost]
         public async Task<ActionResult<LineItem>> PostLineItem(LineItem lineItem)
         {            
-            _context.LineItems.Add(lineItem);
-            //await recalcTotal();
+            _context.LineItems.Add(lineItem);            
             await _context.SaveChangesAsync();
+            await recalcTotal(lineItem);
 
             return CreatedAtAction("GetLineItem", new { id = lineItem.Id }, lineItem);
         }
@@ -130,8 +99,10 @@ namespace PrsWeb.Controllers
             }
 
             _context.LineItems.Remove(lineItem);
-            //await recalcTotal();
+            
             await _context.SaveChangesAsync();
+            await recalcTotal(lineItem);
+
             return NoContent();
         }
 
@@ -152,26 +123,44 @@ namespace PrsWeb.Controllers
             return lineitems;
         }
 
-        public void recalcTotal()
+        public async Task<LineItem> recalcTotal(LineItem lineItem)
         {
             //Request request, Product product
             // SELECT total FROM LineItem Join Request and Product On each Id
             // Request.Total = Product.Price * LineItem.Quantity
 
             Product product = new Product();
-            Request request = new Request();
-            LineItem lineItem = new LineItem();
+            //Request request = lineItem.Request;
 
-            var lineItems =  _context.LineItems
-                .Include(l => l.Request)
+            var request = await _context.Requests
+                .Include(r => r.LineItems)
+                .FirstOrDefaultAsync(r => r.Id == lineItem.RequestId);
+
+            var lineItems = await _context.LineItems
                 .Include(l => l.Product)
-                .Where(l => l.ProductId == product.Id && l.RequestId == request.Id)
+                .Include(l => l.Request)
+                .Where(l => l.RequestId == request.Id)
                 .ToListAsync();
-            request.Total = product.Price * lineItem.Quantity;
-             
-            
-            
-            
+
+            // loop thru lineitems            
+            decimal newRequestTotal = 0.0m;
+            foreach (var item in lineItems)
+            {
+                // for each lineitem, calculate the linetotal and add to newReqeustTotal
+
+                decimal lineTotal = item.Product.Price * item.Quantity;
+
+                newRequestTotal += lineTotal;
+            }
+            request.Total = newRequestTotal;
+
+            // save request
+            _context.Entry(request).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return lineItem;
+
+
         }
     }
 }
