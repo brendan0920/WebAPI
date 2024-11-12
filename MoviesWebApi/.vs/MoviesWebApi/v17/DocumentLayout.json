@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{1348A56B-0344-499F-ABC9-AD60AA362742}|MoviesWebApi\\MoviesWebApi.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\movieswebapi\\movieswebapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1348A56B-0344-499F-ABC9-AD60AA362742}|MoviesWebApi\\MoviesWebApi.csproj|solutionrelative:movieswebapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1348A56B-0344-499F-ABC9-AD60AA362742}|MoviesWebApi\\MoviesWebApi.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\movieswebapi\\movieswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1348A56B-0344-499F-ABC9-AD60AA362742}|MoviesWebApi\\MoviesWebApi.csproj|solutionrelative:movieswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,6 +31,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\MoviesWebApi\\MoviesWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "MoviesWebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\MoviesWebApi\\MoviesWebApi\\Program.cs",
+              "RelativeToolTip": "MoviesWebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T20:30:55.202Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PUdE2MiE5NrhD06JTGUVt55QcSf1orWooJ7PsmsXtgA=",
+  "Source": "ApiDemoForOneService",
+  "BasePath": "_content/ApiDemoForOneService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

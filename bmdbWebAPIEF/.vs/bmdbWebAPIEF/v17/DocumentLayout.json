@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\bmdbwebapief\\bmdbwebapief\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|solutionrelative:bmdbwebapief\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\bmdbwebapief\\bmdbwebapief\\controllers\\creditscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|solutionrelative:bmdbwebapief\\controllers\\creditscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\bmdbwebapief\\bmdbwebapief\\models\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|solutionrelative:bmdbwebapief\\models\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\bmdbwebapief\\bmdbwebapief\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|solutionrelative:bmdbwebapief\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{928FBA49-E57F-4EF0-BCB6-41471E4CDAE3}|bmdbWebAPIEF\\bmdbWebAPIEF.csproj|c:\\users\\max-student\\documents\\brendanbootcampfolder\\repos\\webapi\\bmdbwebapief\\bmdbwebapief\\models\\credit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,54 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Actor.cs",
-              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Models\\Actor.cs",
-              "RelativeDocumentMoniker": "bmdbWebAPIEF\\Models\\Actor.cs",
-              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Models\\Actor.cs",
-              "RelativeToolTip": "bmdbWebAPIEF\\Models\\Actor.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "bmdbWebAPIEF\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "bmdbWebAPIEF\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T17:59:58.752Z",
+              "WhenOpened": "2024-11-06T15:59:08.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Models\\Movie.cs",
-              "RelativeDocumentMoniker": "bmdbWebAPIEF\\Models\\Movie.cs",
-              "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Models\\Movie.cs",
-              "RelativeToolTip": "bmdbWebAPIEF\\Models\\Movie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T17:59:57.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Credit.cs",
               "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Models\\Credit.cs",
               "RelativeDocumentMoniker": "bmdbWebAPIEF\\Models\\Credit.cs",
               "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Models\\Credit.cs",
               "RelativeToolTip": "bmdbWebAPIEF\\Models\\Credit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:07:15.914Z",
+              "WhenOpened": "2024-11-04T19:01:30.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CreditsController.cs",
               "DocumentMoniker": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Controllers\\CreditsController.cs",
               "RelativeDocumentMoniker": "bmdbWebAPIEF\\Controllers\\CreditsController.cs",
               "ToolTip": "C:\\Users\\max-student\\Documents\\BrendanBootcampFolder\\repos\\WebAPI\\bmdbWebAPIEF\\bmdbWebAPIEF\\Controllers\\CreditsController.cs",
               "RelativeToolTip": "bmdbWebAPIEF\\Controllers\\CreditsController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAG8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAIQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:06:45.89Z",
+              "WhenOpened": "2024-11-04T16:19:57.701Z",
               "EditorCaption": ""
             }
           ]

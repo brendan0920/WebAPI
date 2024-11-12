@@ -26,7 +26,7 @@ namespace PrsWeb.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products.Include(p => p.Vendor).ToListAsync();
         }
 
         // GET: api/Products/5
@@ -83,10 +83,24 @@ namespace PrsWeb.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
+            nullifyAndSetId(product);
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+        }
+
+        private void nullifyAndSetId(Product product)
+        {
+            if (product.Vendor != null)
+            {
+                if (product.VendorId == 0)
+                {
+                    product.VendorId = product.Vendor.Id;
+                }
+                product.Vendor = null;
+            }            
+
         }
 
         // DELETE: api/Products/5

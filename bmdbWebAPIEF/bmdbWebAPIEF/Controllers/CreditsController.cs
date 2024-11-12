@@ -24,7 +24,7 @@ namespace bmdbWebAPIEF.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Credit>>> GetCredits()
         {
-            return await _context.Credits.ToListAsync();
+            return await _context.Credits.Include(c => c.Movie).Include(c => c.Actor).ToListAsync();
         }
 
         // GET: api/Credits/5
@@ -77,10 +77,36 @@ namespace bmdbWebAPIEF.Controllers
         [HttpPost]
         public async Task<ActionResult<Credit>> PostCredit(Credit credit)
         {
+            nullifyAndSetId(credit);
             _context.Credits.Add(credit);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCredit", new { id = credit.Id }, credit);
+        }
+
+        // Diff between Java and .Net projects:
+        // Front End sends 'fully qualified' lineItem w/ request and product instances
+        // These need to be nulled-out and the respective movieId and actorId needs to be set
+        private void nullifyAndSetId(Credit credit)
+        {
+            if(credit.Movie != null)
+            {
+                if(credit.MovieId == 0)
+                {
+                    credit.MovieId = credit.Movie.Id;
+                }
+                credit.Movie = null;
+            }
+
+            if (credit.Actor != null)
+            {
+                if (credit.ActorId == 0)
+                {
+                    credit.ActorId = credit.Actor.Id;
+                }
+                credit.Actor = null;
+            }
+
         }
 
         // DELETE: api/Credits/5
@@ -104,6 +130,7 @@ namespace bmdbWebAPIEF.Controllers
             return _context.Credits.Any(e => e.Id == id);
         }
 
+        // GET: api/Credits/movie/4
         [HttpGet("movie/{movieId}")]
         public async Task<ActionResult<IEnumerable<Credit>>> GetCreditsForMovieId(int movieId)
         {

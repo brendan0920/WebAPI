@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using bmdbWebAPIEF.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using bmdbWebAPIEF.Models;
 
 namespace bmdbWebAPIEF.Controllers
 {
@@ -40,6 +35,7 @@ namespace bmdbWebAPIEF.Controllers
 
             return movie;
         }
+
 
         // PUT: api/Movies/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

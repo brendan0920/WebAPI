@@ -1,0 +1,11 @@
+Microsoft.EntityFrameworkCore.SqlServer
+
+Microsoft.EntityFrameworkCore.Tools
+
+
+
+Data Source=DESKTOP-VDMQ3OL\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False
+
+DESKTOP-VDMQ3OL\SQLEXPRESS
+
+Scaffold-DbContext "Server=DESKTOP-VDMQ3OL\SQLEXPRESS;Database=capstone_prs;Integrated Security=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -DataAnnotations -Force -Context PrsdbContext

@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using PrsWeb.Models;
 using PrsWeb.Controllers;
 
+
 namespace PrsWeb.Controllers
 {
     [Route("api/[controller]")]
@@ -27,13 +28,18 @@ namespace PrsWeb.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Request>>> GetRequests()
         {            
-            return await _context.Requests.ToListAsync();
+            return await _context.Requests.Include(r => r.User).ToListAsync();
         }
 
         // GET: api/Requests/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Request>> GetRequest(int id)
         {
+            //var entitiesList = _context.ChangeTracker.Entries().ToList();
+            //foreach (var entity in entitiesList) {
+            //    entity.Reload();
+            //}
+
             //var request = await _context.Requests.FindAsync(id);
             var request = await _context.Requests
                 .Include(r => r.User)
@@ -85,6 +91,7 @@ namespace PrsWeb.Controllers
         [HttpPost]
         public async Task<ActionResult<Request>> PostRequest(RequestForm requestForm)
         {
+
             Request request = new Request();
             string maxReqNbr = _context.Requests.Max(r => r.RequestNumber);
             request.UserId = requestForm.UserId;
@@ -96,13 +103,24 @@ namespace PrsWeb.Controllers
             request.Status = "NEW";
             request.Total = 0.0m;
             request.SubmittedDate = DateTime.Now;
+            nullifyAndSetId(request);
             _context.Requests.Add(request);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetRequest", new { id = request.Id }, request);
         }
 
-        
+        private void nullifyAndSetId(Request request)
+        {
+            if (request.User != null)
+            {
+                if (request.UserId == 0)
+                {
+                    request.UserId = request.User.Id;
+                }
+                request.User = null;
+            }
+        }
 
 
         private string incrementRequestNumber(string maxReqNbr)
@@ -210,6 +228,7 @@ namespace PrsWeb.Controllers
             request.Status = "APPROVED";
             _context.Entry(request).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+
 
             return request;
         }

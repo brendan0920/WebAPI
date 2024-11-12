@@ -25,7 +25,7 @@ namespace PrsWeb.Controllers
         public async Task<ActionResult<IEnumerable<LineItem>>> GetLineItems()
         {
 
-            return await _context.LineItems.ToListAsync();
+            return await _context.LineItems.Include(li => li.Request).Include(li => li.Product).ToListAsync();
         }
 
         // GET: api/LineItems/5
@@ -80,12 +80,36 @@ namespace PrsWeb.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<LineItem>> PostLineItem(LineItem lineItem)
-        {            
+        {
+            Console.WriteLine("LineItem post: " + lineItem.RequestId + ", Product Id: " + lineItem.ProductId);
+            nullifyAndSetId(lineItem);
             _context.LineItems.Add(lineItem);            
             await _context.SaveChangesAsync();
             await recalcTotal(lineItem);
 
             return CreatedAtAction("GetLineItem", new { id = lineItem.Id }, lineItem);
+        }
+
+        private void nullifyAndSetId(LineItem lineItem)
+        {
+            if (lineItem.Request != null)
+            {
+                if (lineItem.RequestId == 0)
+                {
+                    lineItem.RequestId = lineItem.Request.Id;
+                }
+                lineItem.Request = null;
+            }
+
+            if (lineItem.Product != null)
+            {
+                if (lineItem.ProductId == 0)
+                {
+                    lineItem.ProductId = lineItem.Product.Id;
+                }
+                lineItem.Product = null;
+            }
+
         }
 
         // DELETE: api/LineItems/5
@@ -111,15 +135,21 @@ namespace PrsWeb.Controllers
             return _context.LineItems.Any(e => e.Id == id);
         }
 
-        // GET: api/LineItems/lines-for-req/{reqId}
+        //GET: api/LineItems/lines-for-req/{reqId}
         [HttpGet("lines-for-req/{requestId}")]
         public async Task<ActionResult<IEnumerable<LineItem>>> GetLinesForRequestId(int requestId)
         {
             var lineitems = await _context.LineItems
                 .Include(l => l.Request)
                 .Include(l => l.Product)
+                .ThenInclude(p => p.Vendor)
                 .Where(l => l.RequestId == requestId)
                 .ToListAsync();
+
+            
+
+            Console.WriteLine($"Found {lineitems.Count} line items for requestId: {requestId}"); 
+            
             return lineitems;
         }
 
